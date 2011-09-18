@@ -49,7 +49,7 @@ module Guard
             clear_changed_files
             ::Guard.run_on_change(changed_files)
           else
-            sleep 0.1
+            Thread.pass
           end
         end
       end

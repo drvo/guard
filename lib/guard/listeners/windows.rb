@@ -35,6 +35,7 @@ module Guard
         paths = [File.expand_path(event.watcher.path)]
         files = modified_files(paths, :all => true)
         @callback.call(files) unless files.empty?
+        Thread.pass
       end
     end
 
